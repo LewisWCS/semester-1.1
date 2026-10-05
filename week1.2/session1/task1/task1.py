@@ -17,7 +17,7 @@ print(shopping)
 
 # Replace bananas with grapes
 shopping.remove("bananas")
-# shopping.insert([4], "grapes") # fix later
+# shopping.insert([4], "grapes") # fix later # remove the []
 shopping.append("grapes")
 print(shopping)
 
