@@ -24,4 +24,4 @@ print(save, "will be saved for the year")
 # print this out in the format £X.XX (to two decimal places).
 interest = save * 0.08
 total = interest + save
-print(f"This is the amount you will have after interest,£{total:.2f}")
+print(f"This is the amount you will have after interest,£{total:.0f}")
