@@ -14,12 +14,9 @@ try:
     num1 = int(input("Please enter the amount you want to save every month:"))
 except:
     print("please enter a number only")
-
 # Calculate the total amount of money they will have saved by the end of the year (amount per month multiplied by 12).
 # print this out for the user with a suitable message.
 save = num1 * 12 
-print(save, "will be saved for the year")
-
 # Calculate the total amount of money including interest (0.8% of the final annual amount) they will have saved in a year.
 # print this out in the format £X.XX (to two decimal places).
 interest = save * 0.008
