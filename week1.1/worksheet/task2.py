@@ -22,6 +22,6 @@ print(save, "will be saved for the year")
 
 # Calculate the total amount of money including interest (0.8% of the final annual amount) they will have saved in a year.
 # print this out in the format £X.XX (to two decimal places).
-interest = save * 0.08
+interest = save * 0.008
 total = interest + save
 print(f"This is the amount you will have after interest,£{total:.0f}")
