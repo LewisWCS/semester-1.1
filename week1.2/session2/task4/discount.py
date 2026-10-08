@@ -10,14 +10,14 @@
 # and think about WHY they are in this order!
 
 cost = int(input("Amount spent: "))
-is_member = input("Are you a member? (y/n): ").lower()
-is_student = input("Are you a student? (y/n): ").lower()
+is_member = input("Are you a member? (y/n): ").lower()== "yes"
+is_student = input("Are you a student? (y/n): ").lower()=="yes"
 
-if XXX:
+if is_member and is_student:
     final_cost = cost * 0.7
-elif XXX:
+elif is_member and not is_student:
     final_cost = cost * 0.75
-elif XXX:
+elif is_student and not is_member:
     final_cost = cost * 0.85
 else:
     final_cost = cost
