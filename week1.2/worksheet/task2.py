@@ -13,11 +13,11 @@ try:
     set_mean = sum(set) / len(set)
     set_median = sorted(set)[len(set) // 2]
 
-    print(min(set))
-    print(max(set))
-    print(f"{set_mean:.1f}")
-    print(set_median)
-          
+    print(f"minimum = {min(set)}")
+    print(f"maximum = {max(set)}")
+    print(f"mean = {set_mean:.1f}")
+    print(f"median = {set_median}")
+
 except ValueError:
     import sys
-    sys.exit("Error!")
+    sys.exit("Error: no numbers provided")
