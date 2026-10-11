@@ -8,8 +8,8 @@ try:
         print(f"{grade} is a Distinction")
     elif grade <0 or grade > 100:
         import sys
-        sys.exit("Error: grade must be an interger between 0-100")
+        sys.exit("Error: grade must be an integer between 0-100")
 except ValueError:
     import sys
-    sys.exit("Error!")
+    sys.exit("Error: grade must be an integer between 0-100")
 
