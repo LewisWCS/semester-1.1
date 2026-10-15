@@ -4,11 +4,16 @@ try:
         numbers = [float(item) for item in line.split()]
         return numbers
     
-    set = read_number()
-    set_mean = sum(set) / len(set)
-    set_median = sorted(set)[len(set) // 2]
+    numbers = read_number()
 
-    print(f"minimum = {min(set)}" "\n" f"maximum = {max(set)}" "\n" f"mean = {set_mean:.1f}" "\n" f"median = {set_median}")
+    if len(numbers) == 0:
+        import sys
+        sys.exit("Error: no numbers provided")
+    
+    number_mean = sum(numbers) / len(numbers)
+    number_median = sorted(numbers)[len(numbers) // 2]
+
+    print(f"Minimum = {min(numbers)}" "\n" f"Maximum = {max(numbers)}" "\n" f"Mean = {number_mean:.1f}" "\n" f"Median = {number_median}")
 except ValueError:
     import sys
     sys.exit("Error: no numbers provided")
