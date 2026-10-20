@@ -9,11 +9,11 @@ maxtime = int(input("Please enter an integer bigger than one: "))  # read an int
 
 state_order = ["red", "red_amber", "green", "amber"]  # the order of the states
 
-systime = 0
+systime = -1
 state_index = 0 
 state = state_order[state_index]
 time_in_state = 0  # how long we have been in the current state
-print(f"Time {systime:03} State {state}")
+
 for i in range(maxtime):
     systime += 1
     print(f"Time {systime:03} State {state}")
