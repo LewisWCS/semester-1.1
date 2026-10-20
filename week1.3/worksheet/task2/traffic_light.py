@@ -16,15 +16,14 @@ time_in_state = 0  # how long we have been in the current state
 
 for i in range(maxtime):
     systime += 1
+    print(f"Time {systime:03} State {state}")
     time_in_state += 1
     if time_in_state >= states[state]:
-        state_index += 1
-        if state_index >= len(state_order):
-            state_index = 0
-
+        state_index = (state_index + 1) % len(state_order)
         state = state_order[state_index]
         time_in_state = 0
-    print(f"Time {systime:03} State {state}")
+
+    
 
 # Simulate the traffic light system up to time=maxtime in 1-second steps
 
