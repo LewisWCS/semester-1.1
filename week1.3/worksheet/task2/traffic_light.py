@@ -5,7 +5,7 @@ Name: Lewis White
 """
 
 states = { "red":4, "red_amber":3, "green":5, "amber":3 }
-maxtime = int(input("Please enter an integer bigger than one: "))  # read an integer number of steps (>0)
+maxtime = int(input("Enter an integer: "))  # read an integer number of steps (>0)
 
 state_order = ["red", "red_amber", "green", "amber"]  # the order of the states
 
@@ -14,7 +14,7 @@ state_index = 0
 state = state_order[state_index]
 time_in_state = 0  # how long we have been in the current state
 
-for i in range(maxtime):
+for i in range(maxtime + 1):
     systime += 1
     print(f"Time {systime:03} State {state}")
     time_in_state += 1
