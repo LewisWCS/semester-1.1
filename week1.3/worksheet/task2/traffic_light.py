@@ -13,7 +13,7 @@ systime = 0
 state_index = 0 
 state = state_order[state_index]
 time_in_state = 0  # how long we have been in the current state
-
+print(f"Time {systime:03} State {state}")
 for i in range(maxtime):
     systime += 1
     print(f"Time {systime:03} State {state}")
