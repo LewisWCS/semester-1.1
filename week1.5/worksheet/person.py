@@ -4,15 +4,15 @@ from datetime import date
 
 class Person:
     '''Representing a person'''
-    def __init__(self,name,date_birth):
+    def __init__(self,name,birth):
         '''Creating a person'''
         self.name = name
-        self.date_birth = date_birth
+        self.birth = birth
         if name =='':
             raise ValueError('The first and last name must be present')
         if not isinstance(name,(str)):
             raise TypeError('Please enter a valid name')
-        if not isinstance(date_birth, date):
+        if not isinstance(birth, date):
             raise TypeError('Please enter a valid birthday')
     
     
