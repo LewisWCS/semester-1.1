@@ -4,18 +4,24 @@ from datetime import date
 
 class Person:
     '''Representing a person'''
-    def __init__(self,first,last,date_birth):
+    def __init__(self,name,date_birth):
         '''Creating a person'''
-        self.first = first
-        self.last = last
+        self.name = name
         self.date_birth = date_birth
-        self.name = first + last
-        if first == "" or last == "":
+        if name =='':
             raise ValueError('The first and last name must be present')
-
+        if not isinstance(name,(str)):
+            raise TypeError('Please enter a valid name')
+        if not isinstance(date_birth, date):
+            raise TypeError('Please enter a valid birthday')
+    
     def initials(self):
-        '''We are retuning the persons initials'''
-        return self.first[0].upper() + self.last[0].upper()
+        """Return a persons initials"""
+        parts = self.name.split()
+        result = ""
+        for part in parts:
+            result += part[0].upper()
+        return result
     
     def is_birthday(self):
         '''Checking if the persons birthday is today'''
