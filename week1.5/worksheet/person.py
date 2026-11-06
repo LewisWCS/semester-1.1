@@ -15,6 +15,7 @@ class Person:
         if not isinstance(date_birth, date):
             raise TypeError('Please enter a valid birthday')
     
+    
     def initials(self):
         """Return a persons initials"""
         parts = self.name.split()
@@ -28,6 +29,7 @@ class Person:
         today = date.today()
         return(today.day == self.date_birth.day and 
                today.month == self.date_birth.month)
+p = Person("John Smell", date(2004, 5, 9))
 
 
     
