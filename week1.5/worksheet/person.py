@@ -27,8 +27,8 @@ class Person:
     def is_birthday(self):
         '''Checking if the persons birthday is today'''
         today = date.today()
-        return(today.day == self.date_birth.day and 
-               today.month == self.date_birth.month)
+        return(today.day == self.birth.day and 
+               today.month == self.birth.month)
 p = Person("John Smell", date(2004, 5, 9))
 
 
