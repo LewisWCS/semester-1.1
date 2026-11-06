@@ -26,7 +26,3 @@ class Rectangle:
         '''Checking the perimeter of the rectangle'''
         return 2 * (self.width + self.height)
 
-rec = Rectangle()
-print(rec.is_square())
-print(rec.perimeter())
-print(rec.area())

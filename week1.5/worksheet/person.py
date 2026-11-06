@@ -23,8 +23,5 @@ class Person:
         return(today.day == self.date_birth.day and 
                today.month == self.date_birth.month)
 
-emp_1 = Person()
-print(emp_1.initials())
-print(emp_1.date_birth)
-print(emp_1.is_birthday())
+
     
