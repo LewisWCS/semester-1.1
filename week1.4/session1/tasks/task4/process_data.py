@@ -9,19 +9,12 @@
 
 
 def process_data(data):
-    """
-    Processes a list of integers and returns the sum of all values.
-    If the list is empty, it returns None.
-
-    Args:
-        data (list of int): The list of integers to process.
-
-    Returns:
-        int: The sum of all integers in the list or None if empty.
-    """
+    total = 0
+    for i in data:
+        total = total + i
     if not data:
-        return 0
-    return sum(data)
+        return '0'
+    return total
 
 # What is output from the following line of code?
 print(process_data([1, 2, 3, 4, 5]))  # 15?

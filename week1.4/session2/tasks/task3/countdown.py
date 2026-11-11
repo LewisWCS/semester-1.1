@@ -15,6 +15,9 @@ def countdown(n):
     """
 
     # Complete your code here
+    for i in range(n, -1, -1):
+        print(i)
+    
     # base case
 
     # recursive case

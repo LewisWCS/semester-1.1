@@ -32,9 +32,26 @@ def calculate_grade(marks):
         None: If `marks` is not a valid integer or is outside the allowed
               range (greater than 100 or negative)
     """
+    if not isinstance(marks,int):
+        return ValueError('Please enter a valid integer')
+    
+    if marks > 100 or marks < 0:
+        return ValueError('Please enter a valid integer between 0-100')
+    
+    if marks < 50:
+        print('Grade:F')
+    elif marks >= 50 and marks < 60:
+        print('Grade:D')
+    elif marks >= 60 and marks < 70:
+        print('Grade:C')
+    elif marks >= 70 and marks < 80:
+        print('Grade:B')
+    elif marks >= 80:
+        print('Grade:A')
+        
     pass
 
-    return grade
+    return marks
 
 
 # Check if the following tests produce the correct output

@@ -7,16 +7,19 @@
 def add_two_numbers(num1, num2):
     num1 = float(num1)
     num2 = float(num2)
-    return (num1 + num2)     # What happen if you remove the parenthesis ()?
+    return (num1 + num2)    # What happen if you remove the parenthesis ()? it doesnt do anything
 
 
 # Check if the following lines produce the correct output
 print(add_two_numbers(3, 4))
 print(add_two_numbers(num1=3, num2=4))
 print(add_two_numbers(3, num2=4))
+#all of them return the same value
 
 # Why does the next line work?
 print(add_two_numbers("3", "4"))
+#it works because it turns the strings 3 and 4 into float numbers
 
 # What happens if you try this? Uncomment the code to find out.
-# print(add_two_numbers("three", "four"))
+print(add_two_numbers("three", "four"))
+#it becomes a value error because three isnt actually a convertable string

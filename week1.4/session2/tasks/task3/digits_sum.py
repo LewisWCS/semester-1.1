@@ -18,6 +18,8 @@ def digits_sum(number):
         int: The sum of the digits of the input integer.
     """
     # complete your code here
+    for n in str(number):
+        return sum(int(digit) for digit in str(number))
     # base case
 
     # recursive case
