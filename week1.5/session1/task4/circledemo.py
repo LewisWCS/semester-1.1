@@ -1,5 +1,8 @@
 # Week 1.5, Session 1: Task 4
-
+class circle:
+    def __init__(self, center_point, radius):
+        self.center = center_point
+        self.radius = radius
 # Add one or more import statements here to give this program
 # access to the Point and Circle classes defined in geometry.py
 
