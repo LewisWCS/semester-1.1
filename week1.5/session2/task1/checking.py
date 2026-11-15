@@ -14,6 +14,10 @@ class Point:
         """
         Creates a Point, given x & y coordinates.
         """
+        if not isinstance(x, (int,float)):
+            raise TypeError("x coordinate must be a number")
+        if not isinstance(y, (int,float)):
+            raise TypeError("y coordinate must be a number")
         self.x = x
         self.y = y
 
@@ -32,5 +36,5 @@ class Point:
 
 # Test program
 
-p = Point("two", "one")
-print(p.distance())
+p = Point('two', 'one') # the reason this wasnt working was because it was using strings 'one' and 'two' instead of numbers 1 and 2
+print(f'Distance from origin: {p.distance():.1f}')

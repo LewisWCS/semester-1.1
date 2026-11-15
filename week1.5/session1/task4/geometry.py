@@ -5,6 +5,21 @@ Classes for working with two-dimensional geometry.
 """
 
 import math
+class circle:
+    def __init__(self, center_point, radius):
+        self.center = center_point
+        self.radius = radius
+
+class point:
+    def __init__(self,x, y):
+        self.x = x
+        self.y = y
+
+def area(self):
+        return math.pi * (self.radius ** 2)
+
+def perimeter(self):
+        return 2 * math.pi * self.radius
 
 # Copy Point class definition here
 

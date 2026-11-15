@@ -26,18 +26,28 @@ class Dataset:
         """
         Returns the size of this Dataset.
         """
+        return len(self.data)
 
     def __getitem__(self, index):
         """
         Returns the value at the specified position in this Dataset.
         """
+        return self.data[index]
 
     def mean(self):
         """
         Returns the arithmetic mean of the values in this Dataset.
         """
+        return sum(self.data) / len(self.data)
 
     def median(self):
         """
         Returns the median of the values in this Dataset.
         """
+        values = sorted(self.data)
+        n = len(values)
+
+        if n % 2 == 1:
+            return values[n//2]
+        else:
+            return (values[n//2 - 1]+ values[n//2])/ 2 
