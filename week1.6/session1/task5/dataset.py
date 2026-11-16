@@ -40,7 +40,11 @@ class QuakeDataset:
         # Keep in mind that the items obtained by this for loop will be
         # dictionaries. You will need to extract the required values from
         # each dictionary and convert them into the required types before
-        # creating a Quake object and storing it in the list.
+        # creating a Quake object and storing it in the list.\
+        reader = self.feed.reader()
+        for row in reader:
+            print(row)
+            break
 
     def __len__(self):
         """
@@ -71,6 +75,7 @@ class QuakeDataset:
         """
         # Write code here that computes the mean magnitude of all the
         # quakes currently in the dataset
+
 
     def shallowest_quake(self):
         """

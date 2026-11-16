@@ -38,4 +38,23 @@ class Shape:
 
 
 # Implement your Circle class here
+
+class circle(Shape):
+    def __init__(self,radius,position,colour = 'red'):
+        super().__init__(position,colour)
+        self.set_radius(radius)
+
+    def set_radius(self,radius):
+        if not isinstance(radius,(int,float)):
+            raise TypeError('Please enter a integer for redius')
+        if radius <= 0:
+            raise ValueError('Radius has to be bigger than one')
+        self.radius = radius
+
+    def __str__(self):
+        return f'{self.colour} circle, radius {self.radius}, at {self.position}'
+
+        
 # Make sure that it inherits properly from Shape!
+
+print(circle(2.5,Point(0,0)))
